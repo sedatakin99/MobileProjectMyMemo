@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="View Details"
+        android:textColor="@color/secondaryColor"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="10dp"
+        android:hint="Title"
+        android:textColorHint="@color/secondaryColor"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/descriptionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleView"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:hint="Description"
+        android:lines="3"
+        android:textSize="18dp"
+        android:textColorHint="@color/secondaryColor"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_below="@+id/descriptionView"
+        android:hint="Location"
+        android:layout_marginTop="10dp"
+        android:id="@+id/locationView"
+        android:textColorHint="@color/secondaryColor"/>
+
+
+    <RelativeLayout
+        android:id="@+id/viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationView"
+        android:backgroundTint="#eeef"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:maxWidth="250dp"
+            android:maxHeight="200dp"
+            app:srcCompat="@drawable/default_memory" />
+
+        <TextView
+            android:id="@+id/moodTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="10dp"
+            android:text="Mood:"
+            android:textColor="@color/thirdColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/emojiView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/moodTextView" />
+
+        <Spinner
+            android:id="@+id/spinnerEmojiView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emojiView"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/moodTextView" />
+
+        <Button
+            android:id="@+id/buttonUpdateImage"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="140dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:drawableLeft="@drawable/image_search"
+            android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewImage"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/mainColor"
+        android:text="Update Memory" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeView"
+        android:layout_below="@+id/buttonUpdate"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/buttonUpdateTime"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/trash_can" />
+
+    <Button
+        android:id="@+id/buttonUpdateTime"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/buttonPassword"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/add_time" />
+
+    <Button
+        android:id="@+id/buttonPassword"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/timeView"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/lock_asset" />
+
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewImage"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/buttonUpdate"
+        android:backgroundTint="@color/mainColor"
+        android:text="View Memories" />
+
+
+</RelativeLayout>

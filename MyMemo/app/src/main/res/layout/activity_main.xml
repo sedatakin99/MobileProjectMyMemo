@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Enter Details"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryColor"/>
+
+    <EditText
+        android:id="@+id/titleMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textMain"
+        android:layout_marginTop="10dp"
+        android:hint="Title"
+        android:textColorHint="@color/secondaryColor"
+        android:textSize="24dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionMain"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/titleMain"
+        android:hint="Description"
+        android:textColorHint="@color/secondaryColor"
+        android:gravity="top"
+        android:lines="3"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptionMain"
+        android:id="@+id/locationRelative">
+
+        <EditText
+            android:id="@+id/locationMain"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Location"
+            android:textColorHint="@color/secondaryColor"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/buttonGetLoc"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/locationMain"
+            android:drawableLeft="@drawable/add_location"
+            android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addImage"
+        android:layout_below="@+id/locationRelative"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#eeef">
+
+        <ImageView
+            android:id="@+id/imageViewMain"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:maxWidth="250dp"
+            android:maxHeight="200dp"
+            app:srcCompat="@drawable/default_memory" />
+
+        <TextView
+            android:id="@+id/moodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="10dp"
+            android:text="Mood:"
+            android:textStyle="bold"
+            android:textColor="@color/thirdColor"/>
+
+        <Spinner
+            android:id="@+id/spinnerEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/moodText" />
+
+        <Button
+            android:id="@+id/buttonGetImage"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="140dp"
+            android:layout_toRightOf="@+id/imageViewMain"
+            android:drawableLeft="@drawable/image_search"
+            android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addImage"
+        android:layout_marginTop="10dp"
+        android:text="Save Memory"
+        android:backgroundTint="@color/mainColor"/>
+
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSave"
+        android:layout_marginTop="10dp"
+        android:text="View Memories"
+        android:backgroundTint="@color/mainColor"/>
+
+</RelativeLayout>
